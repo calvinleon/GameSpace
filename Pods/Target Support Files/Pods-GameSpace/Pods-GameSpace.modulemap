@@ -1,0 +1,6 @@
+module Pods_GameSpace {
+  umbrella header "Pods-GameSpace-umbrella.h"
+
+  export *
+  module * { export * }
+}
