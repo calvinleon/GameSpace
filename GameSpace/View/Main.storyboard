@@ -4,13 +4,18 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--OnboardingVC-->
         <scene sceneID="GLx-lJ-7Hn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-p7-3ga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="pqb-6O-Afh" customClass="OnboardingVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W3Z-HL-bcB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -26,6 +31,19 @@
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV5-1p-O9Z">
+                                        <rect key="frame" x="312" y="618" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.right" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextSegue:" destination="pqb-6O-Afh" eventType="touchUpInside" id="0Er-w9-Akf"/>
+                                            <segue destination="ZDd-RM-jJJ" kind="show" id="s4G-uL-gf8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="KQm-L9-HIj"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="tBO-EZ-Swf"/>
@@ -36,12 +54,115 @@
                     </view>
                     <navigationItem key="navigationItem" id="jHF-h5-u9n"/>
                     <connections>
+                        <outlet property="nextBtn" destination="UV5-1p-O9Z" id="UsA-77-ofV"/>
                         <outlet property="pageControl" destination="bjz-xY-1lF" id="RFl-fu-9W6"/>
                         <outlet property="scrollView" destination="C6A-lq-iWY" id="KiZ-yK-0Gj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-p7-3ga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="-151.33928571428569"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="7jo-8D-NfP">
+            <objects>
+                <viewController id="Wz2-X9-U2z" customClass="GamesVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0kW-ar-SYr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-MO-xX4">
+                                <rect key="frame" x="30" y="560" width="354" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-ay-xg2">
+                                <rect key="frame" x="30" y="93" width="154" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nVM-eP-lCd">
+                                <rect key="frame" x="0.0" y="205" width="414" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4P5-Y5-JAk">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FJX-GI-meR">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WTa-7B-2if">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="chv-22-2QY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller.fill" catalog="system" id="9GX-6N-dOb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46g-74-fbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052.1739130434785" y="-161.38392857142856"/>
+        </scene>
+        <!--Detail GamesVC-->
+        <scene sceneID="7Lf-C2-cBv">
+            <objects>
+                <viewController id="sDA-eD-Q5I" customClass="DetailGamesVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xf-WL-fEu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jWW-ay-5DO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lD-uQ-0YZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855" y="-161"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="pIG-N3-Bg9">
+            <objects>
+                <viewController id="laa-8u-ECB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pIm-oM-1eQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gJG-JM-hiE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard" id="MDl-5D-2GX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBH-el-VC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="508"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Rgg-AJ-5TB">
+            <objects>
+                <viewController id="Th7-Hx-KSD" customClass="ProfileVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m6M-qf-JsF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="M3b-y4-AkN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="vB6-tG-Cp3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-xL-Y6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="508"/>
         </scene>
         <!--Item-->
         <scene sceneID="S2x-4q-BLG">
@@ -62,5 +183,32 @@
             </objects>
             <point key="canvasLocation" x="450.72463768115944" y="-151.33928571428569"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tpH-EU-jfF">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZDd-RM-jJJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9Ag-k2-UZ6"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNP-Us-TOX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wz2-X9-U2z" kind="relationship" relationship="viewControllers" id="BL5-Hf-njx"/>
+                        <segue destination="laa-8u-ECB" kind="relationship" relationship="viewControllers" id="Usk-iO-EFA"/>
+                        <segue destination="Th7-Hx-KSD" kind="relationship" relationship="viewControllers" id="7LN-VG-ThH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWh-TA-TCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142.0289855072465" y="-161.38392857142856"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="82"/>
+        <image name="leaderboard" width="31" height="20"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>

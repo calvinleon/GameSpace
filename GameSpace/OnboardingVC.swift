@@ -12,6 +12,7 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var nextBtn: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
             self.navigationController?.isNavigationBarHidden = true
@@ -34,10 +35,17 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
             view.addSubview(pageControl)
             view.bringSubviewToFront(pageControl)
             
+            view.addSubview(nextBtn)
+            nextBtn.isHidden = true
+            
             self.navigationController?.isNavigationBarHidden = true
         }
         
-        func createSlides() -> [Slide] {
+        @IBAction func nextSegue(_ sender: Any) {
+     
+        }
+        
+      func createSlides() -> [Slide] {
 
             let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
             slide1.onboardingTitle.text = "Discover Your Favorite Game"
@@ -85,34 +93,26 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
             let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
                 
                 
-                /*
-                 * below code changes the background color of view on paging the scrollview
-                 */
-        //        self.scrollView(scrollView, didScrollToPercentageOffset: percentageHorizontalOffset)
-                
+         
             
                 /*
                  * below code scales the imageview on paging the scrollview
                  */
-               // let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
+                let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
                 
-               // if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
-                    
-                 //   slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-                   // slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
-                    
-                //} else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-                //slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-                  //  slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
-                    
-                //} else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-                  //  slides[2].imageView.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-                    //slides[3].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
-                    
-                //} else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-                  //  slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-                    //slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+                if(percentOffset.x > 0 && percentOffset.x <= 0.33) {
+                    nextBtn.isHidden = true
+
+                } else if(percentOffset.x > 0.33 && percentOffset.x <= 0.66) {
+                    nextBtn.isHidden = true
+
+                } else if(percentOffset.x > 0.66 && percentOffset.x <= 1) {
+                    nextBtn.isHidden = false
+                    UIView.animate(withDuration: 0.5, delay: 0.5, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
+                                
+                        self.slides[2].onboardingButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                            }, completion: nil)
                 }
-    
+    }
 }
 
