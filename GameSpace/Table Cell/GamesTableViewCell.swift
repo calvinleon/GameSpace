@@ -46,12 +46,14 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     }
        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesCollectionViewCell.identifier, for: indexPath) as! GamesCollectionViewCell
-        let game = games[indexPath.item]
         
-        cell.game = game
-        
-        return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesCollectionViewCell.identifier, for: indexPath) as! GamesCollectionViewCell
+            let game = games[indexPath.item]
+            
+            cell.game = game
+            
+            return cell
+      
     }
 
     
