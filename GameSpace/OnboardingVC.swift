@@ -13,6 +13,7 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var planetImg: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
             self.navigationController?.isNavigationBarHidden = true
@@ -23,20 +24,21 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-           
             
             scrollView.delegate = self
             
-           slides = createSlides()
-           setupSlideScrollView(slides: slides)
+            slides = createSlides()
+            setupSlideScrollView(slides: slides)
            
-           pageControl.numberOfPages = slides.count
-           pageControl.currentPage = 0
+            pageControl.numberOfPages = slides.count
+            pageControl.currentPage = 0
             view.addSubview(pageControl)
             view.bringSubviewToFront(pageControl)
             
             view.addSubview(nextBtn)
+            view.addSubview(planetImg)
             nextBtn.isHidden = true
+            planetImg.isHidden = true
             
             self.navigationController?.isNavigationBarHidden = true
         }
@@ -92,27 +94,27 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
             let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
             let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
                 
-                
-         
-            
-                /*
-                 * below code scales the imageview on paging the scrollview
-                 */
                 let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
                 
                 if(percentOffset.x > 0 && percentOffset.x <= 0.33) {
                     nextBtn.isHidden = true
+                    planetImg.isHidden = true
 
                 } else if(percentOffset.x > 0.33 && percentOffset.x <= 0.66) {
                     nextBtn.isHidden = true
+                    planetImg.isHidden = true
 
-                } else if(percentOffset.x > 0.66 && percentOffset.x <= 1) {
+                } else if(percentOffset.x > 0.66 && percentOffset.x <= 0.95) {
+                    nextBtn.isHidden = false
+                    planetImg.isHidden = true
+                    
+                } else if(percentOffset.x > 0.95 && percentOffset.x <= 1) {
                     nextBtn.isHidden = false
                     UIView.animate(withDuration: 0.5, delay: 0.5, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
-                                
-                        self.slides[2].onboardingButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                            }, completion: nil)
+                            
+                    self.slides[2].onboardingButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                        }, completion: nil)
+                    planetImg.isHidden = false
                 }
     }
 }
-
