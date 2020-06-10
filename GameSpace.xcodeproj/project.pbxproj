@@ -15,6 +15,7 @@
 		D72670A5249009250095EC4A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72670A1249009240095EC4A /* Montserrat-Bold.ttf */; };
 		D72670A6249009250095EC4A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72670A2249009240095EC4A /* Montserrat-SemiBold.ttf */; };
 		D72670A7249009250095EC4A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72670A3249009250095EC4A /* Montserrat-Regular.ttf */; };
+		D72670A924907A440095EC4A /* ReflectGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72670A824907A440095EC4A /* ReflectGame.storyboard */; };
 		D747A6BE248FF53E001EBCA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6BD248FF53E001EBCA5 /* AppDelegate.swift */; };
 		D747A6C0248FF53E001EBCA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6BF248FF53E001EBCA5 /* SceneDelegate.swift */; };
 		D747A6C2248FF53E001EBCA5 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6C1248FF53E001EBCA5 /* OnboardingVC.swift */; };
@@ -35,6 +36,7 @@
 		D72670A1249009240095EC4A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D72670A2249009240095EC4A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		D72670A3249009250095EC4A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		D72670A824907A440095EC4A /* ReflectGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReflectGame.storyboard; sourceTree = "<group>"; };
 		D747A6BA248FF53E001EBCA5 /* GameSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D747A6BD248FF53E001EBCA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D747A6BF248FF53E001EBCA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				D70E61062490026B00A9380F /* Slide.xib */,
 				D726709B249004C50095EC4A /* Main.storyboard */,
+				D72670A824907A440095EC4A /* ReflectGame.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72670A924907A440095EC4A /* ReflectGame.storyboard in Resources */,
 				D72670A7249009250095EC4A /* Montserrat-Regular.ttf in Resources */,
 				D747A6CA248FF53F001EBCA5 /* LaunchScreen.storyboard in Resources */,
 				D72670A4249009250095EC4A /* Montserrat-Medium.ttf in Resources */,

@@ -31,6 +31,7 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
            
            pageControl.numberOfPages = slides.count
            pageControl.currentPage = 0
+            view.addSubview(pageControl)
             view.bringSubviewToFront(pageControl)
             
             self.navigationController?.isNavigationBarHidden = true
@@ -64,7 +65,6 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height - 500)
         scrollView.isPagingEnabled = true
-        
             
             for (i,slide) in slides.enumerated() {
             slide.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
@@ -75,7 +75,6 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
             let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
             pageControl.currentPage = Int(pageIndex)
-                
             let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
             let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
                 
