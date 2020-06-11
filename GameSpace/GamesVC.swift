@@ -11,9 +11,14 @@ import UIKit
 class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var table: UITableView!
-    @IBOutlet weak var topImg: UIView!
     
     var games = Game.fetchGame()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+  //      navigationController?.navigationBar.prefersLargeTitles = true
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +26,20 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         table.register(GamesTableViewCell.nib(), forCellReuseIdentifier: GamesTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
+        table.separatorStyle = UITableViewCell.SeparatorStyle.none
+
+        self.navigationItem.setHidesBackButton(true, animated: true);
          
-        topImg.layer.cornerRadius = 10.0
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+       
+        if section == 0 {
+            return 1
+        } else {
+            return games.count
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,10 +74,19 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return cell
      
         } else {
-            let cell = table.dequeueReusableCell(withIdentifier: GamesTableViewCell.identifier, for: indexPath) as! GamesTableViewCell
-            cell.selectionStyle = .none
-            cell.configure(with: games)
-            return cell
+//            let cell = table.dequeueReusableCell(withIdentifier: GamesTableViewCell.identifier, for: indexPath) as! GamesTableViewCell
+//            cell.selectionStyle = .none
+//            cell.configure(with: games)
+//            return cell
+            
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "AllGamesCell", for: indexPath) as! AllGameTableViewCell
+            cell2.selectionStyle = .none
+            let game = games[indexPath.row]
+        
+            
+            cell2.allGameImg.image = game.gameImg
+            
+            return cell2
         }
     }
     
@@ -73,7 +95,7 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return 250.0
 
         } else {
-            return 250.0
+            return 74.0
         }
         
     }
