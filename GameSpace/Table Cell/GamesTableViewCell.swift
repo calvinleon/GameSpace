@@ -62,8 +62,4 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         
     }
     
-    
-    
-    
-    
 }

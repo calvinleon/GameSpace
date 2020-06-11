@@ -20,7 +20,7 @@
 		D72670B9249132F10095EC4A /* GamesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72670B7249132F10095EC4A /* GamesCollectionViewCell.xib */; };
 		D72670BF249133470095EC4A /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72670BD249133470095EC4A /* GamesTableViewCell.swift */; };
 		D72670C0249133470095EC4A /* GamesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72670BE249133470095EC4A /* GamesTableViewCell.xib */; };
-		D72670CE249159600095EC4A /* AllGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72670CD249159600095EC4A /* AllGameCollectionViewCell.swift */; };
+		D72670D0249162140095EC4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72670CF249162140095EC4A /* Main.storyboard */; };
 		D747A6BE248FF53E001EBCA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6BD248FF53E001EBCA5 /* AppDelegate.swift */; };
 		D747A6C0248FF53E001EBCA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6BF248FF53E001EBCA5 /* SceneDelegate.swift */; };
 		D747A6C2248FF53E001EBCA5 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6C1248FF53E001EBCA5 /* OnboardingVC.swift */; };
@@ -46,7 +46,7 @@
 		D72670B7249132F10095EC4A /* GamesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D72670BD249133470095EC4A /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		D72670BE249133470095EC4A /* GamesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesTableViewCell.xib; sourceTree = "<group>"; };
-		D72670CD249159600095EC4A /* AllGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		D72670CF249162140095EC4A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D747A6BA248FF53E001EBCA5 /* GameSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D747A6BD248FF53E001EBCA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D747A6BF248FF53E001EBCA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D70E61062490026B00A9380F /* Slide.xib */,
+				D72670CF249162140095EC4A /* Main.storyboard */,
 				D72670A824907A440095EC4A /* ReflectGame.storyboard */,
 			);
 			path = View;
@@ -143,7 +144,6 @@
 			children = (
 				D72670B6249132F00095EC4A /* GamesCollectionViewCell.swift */,
 				D72670B7249132F10095EC4A /* GamesCollectionViewCell.xib */,
-				D72670CD249159600095EC4A /* AllGameCollectionViewCell.swift */,
 			);
 			path = "Collection Cell";
 			sourceTree = "<group>";
@@ -248,6 +248,7 @@
 				D747A6CA248FF53F001EBCA5 /* LaunchScreen.storyboard in Resources */,
 				D72670A4249009250095EC4A /* Montserrat-Medium.ttf in Resources */,
 				D72670B9249132F10095EC4A /* GamesCollectionViewCell.xib in Resources */,
+				D72670D0249162140095EC4A /* Main.storyboard in Resources */,
 				D72670A5249009250095EC4A /* Montserrat-Bold.ttf in Resources */,
 				D72670A6249009250095EC4A /* Montserrat-SemiBold.ttf in Resources */,
 				D747A6C7248FF53F001EBCA5 /* Assets.xcassets in Resources */,
@@ -289,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D747A6D4248FFBF0001EBCA5 /* ProfileVC.swift in Sources */,
-				D72670CE249159600095EC4A /* AllGameCollectionViewCell.swift in Sources */,
 				D747A6C2248FF53E001EBCA5 /* OnboardingVC.swift in Sources */,
 				D747A6BE248FF53E001EBCA5 /* AppDelegate.swift in Sources */,
 				D72670BF249133470095EC4A /* GamesTableViewCell.swift in Sources */,

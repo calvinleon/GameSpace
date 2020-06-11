@@ -32,9 +32,13 @@ class Game {
     static func fetchGame() -> [Game]
     {
         return [
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game3.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game5.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game6.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game7.png")!),
             Game(gameName: "game1", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game1.png")!),
             Game(gameName: "game2", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game2.png")!),
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game3.png")!)
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game4.png")!),
         ]
     }
 }

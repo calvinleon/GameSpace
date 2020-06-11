@@ -11,18 +11,18 @@ import UIKit
 class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var table: UITableView!
+    @IBOutlet weak var topImg: UIView!
     
     var games = Game.fetchGame()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         
-        
         table.register(GamesTableViewCell.nib(), forCellReuseIdentifier: GamesTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
          
+        topImg.layer.cornerRadius = 10.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,10 +34,10 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 180))
 
         let label = UILabel()
-        label.frame = CGRect.init(x: 30, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.frame = CGRect.init(x: 30, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-130)
         
         if section == 0{
             label.text = "Best of The Week"
@@ -45,9 +45,8 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else {
             label.text =  "All Games"
         }
-//        label.font = UIFont().futura(16) // my custom font
-        label.textColor = UIColor.white // my custom colour
-
+        label.font = UIFont(name:"Montserrat-Bold", size:16)
+        label.textColor = UIColor(red: 0.66, green: 0.66, blue: 0.66, alpha: 1.00)
         headerView.addSubview(label)
 
         return headerView
@@ -69,9 +68,14 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+        if indexPath.section == 0 {
+            return 250.0
+
+        } else {
+            return 250.0
+        }
+        
     }
 }
 

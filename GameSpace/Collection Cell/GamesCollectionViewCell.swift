@@ -35,7 +35,7 @@ class GamesCollectionViewCell: UICollectionViewCell {
         
         if let game = game {
             self.gamesImgView.image = game.gameImg
-            self.gamesImgView.contentMode = .scaleAspectFill
+//            self.gamesImgView.contentMode = .scaleToFill
         }
     }
 
