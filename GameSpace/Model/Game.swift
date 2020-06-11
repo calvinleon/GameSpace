@@ -16,8 +16,9 @@ class Game {
     var gameLength = ""
     var gameStory = ""
     var gameImg:UIImage
+    var thumbnailImg: UIImage
         
-    init(gameName: String, gameDesc: String, gameDifficulty: String, gameLength: String, gameStory: String, gameImg: UIImage)
+    init(gameName: String, gameDesc: String, gameDifficulty: String, gameLength: String, gameStory: String, gameImg: UIImage, thumbnailImg: UIImage)
     {
         self.gameName = gameName
         self.gameDesc = gameDesc
@@ -25,6 +26,7 @@ class Game {
         self.gameLength = gameLength
         self.gameStory = gameStory
         self.gameDifficulty = gameDifficulty
+        self.thumbnailImg = thumbnailImg
     }
     
         
@@ -32,13 +34,13 @@ class Game {
     static func fetchGame() -> [Game]
     {
         return [
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game3.png")!),
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game5.png")!),
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game6.png")!),
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game7.png")!),
-            Game(gameName: "game1", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game1.png")!),
-            Game(gameName: "game2", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game2.png")!),
-            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game4.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game3.png")!, thumbnailImg: UIImage(named: "tgame3.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game5.png")!,thumbnailImg: UIImage(named: "tgame5.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game6.png")!,thumbnailImg: UIImage(named: "tgame6.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game7.png")!,thumbnailImg: UIImage(named: "tgame7.png")!),
+            Game(gameName: "game1", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game1.png")!,thumbnailImg: UIImage(named: "tgame1.png")!),
+            Game(gameName: "game2", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game2.png")!,thumbnailImg: UIImage(named: "tgame2.png")!),
+            Game(gameName: "game3", gameDesc: "desc", gameDifficulty: "Easy", gameLength: "5 minutes", gameStory: "", gameImg: UIImage(named: "game4.png")!,thumbnailImg: UIImage(named: "tgame3.png")!),
         ]
     }
 }

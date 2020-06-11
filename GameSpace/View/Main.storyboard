@@ -80,34 +80,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-MO-xX4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="74" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-MO-xX4">
                                 <rect key="frame" x="0.0" y="88" width="414" height="676"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGamesCell" rowHeight="74" id="Xad-Cp-nb2" customClass="AllGameTableViewCell" customModule="GameSpace" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="74"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGamesCell" rowHeight="75" id="Xad-Cp-nb2" customClass="AllGameTableViewCell" customModule="GameSpace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xad-Cp-nb2" id="EK5-0U-WcX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9w-un-qSe">
                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="74" id="X6g-Ys-XNI"/>
-                                                        <constraint firstAttribute="width" constant="74" id="scx-w5-GdQ"/>
+                                                        <constraint firstAttribute="height" constant="74" id="9rE-gf-Ua0"/>
+                                                        <constraint firstAttribute="width" constant="74" id="kDi-4w-Hfl"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-tc-kyd">
-                                                    <rect key="frame" x="89" y="45" width="33" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-tc-kyd">
+                                                    <rect key="frame" x="89" y="46" width="229" height="15"/>
+                                                    <string key="text">one small step to start your adventure
+</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-nT-t5a">
-                                                    <rect key="frame" x="88" y="14" width="49" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-nT-t5a">
+                                                    <rect key="frame" x="88" y="14" width="111" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -115,21 +117,46 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="topMargin" constant="3" id="1To-6t-Y4O"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ILk-tc-kyd" secondAttribute="bottom" constant="3" id="Bkw-HO-pb7"/>
-                                                <constraint firstAttribute="bottom" secondItem="i9w-un-qSe" secondAttribute="bottom" id="K5h-gt-5GB"/>
-                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="14" id="T5s-1F-9BW"/>
-                                                <constraint firstItem="i9w-un-qSe" firstAttribute="leading" secondItem="EK5-0U-WcX" secondAttribute="leading" id="Un9-E9-rud"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ILk-tc-kyd" secondAttribute="bottom" constant="3" id="Jbd-PP-Jch"/>
+                                                <constraint firstItem="ILk-tc-kyd" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="15" id="mTO-wh-QYg"/>
                                                 <constraint firstItem="Vf4-nT-t5a" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="topMargin" constant="3" id="ni8-14-X1d"/>
-                                                <constraint firstItem="ILk-tc-kyd" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="15" id="rit-vS-wSG"/>
-                                                <constraint firstItem="i9w-un-qSe" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="top" id="wXh-QI-Vpf"/>
+                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="14" id="w8J-16-wKd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="i9w-un-qSe" firstAttribute="top" secondItem="Xad-Cp-nb2" secondAttribute="top" id="AFs-a7-iQZ"/>
+                                            <constraint firstItem="i9w-un-qSe" firstAttribute="leading" secondItem="EK5-0U-WcX" secondAttribute="leading" id="lPA-A4-FSu"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="allGameImg" destination="i9w-un-qSe" id="uBy-bb-94A"/>
                                             <outlet property="allGameLbl" destination="Vf4-nT-t5a" id="0DW-8D-NW2"/>
                                             <outlet property="allGameStory" destination="ILk-tc-kyd" id="mFI-0c-Q7h"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlankTableViewCell" rowHeight="100" id="Rr7-iB-lVJ">
+                                        <rect key="frame" x="0.0" y="130.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rr7-iB-lVJ" id="pVD-Td-uJI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQe-wy-uMu">
+                                                    <rect key="frame" x="30" y="34" width="154" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="34"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xQe-wy-uMu" secondAttribute="bottom" constant="13" id="52V-WC-sb9"/>
+                                                <constraint firstItem="xQe-wy-uMu" firstAttribute="top" secondItem="pVD-Td-uJI" secondAttribute="topMargin" constant="23" id="Rz2-Hk-zBU"/>
+                                                <constraint firstItem="xQe-wy-uMu" firstAttribute="leading" secondItem="pVD-Td-uJI" secondAttribute="leadingMargin" constant="10" id="U1R-0K-xdE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
