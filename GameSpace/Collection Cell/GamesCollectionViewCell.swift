@@ -37,6 +37,7 @@ class GamesCollectionViewCell: UICollectionViewCell {
             self.gamesImgView.image = game.gameImg
 //            self.gamesImgView.contentMode = .scaleToFill
         }
+        
     }
 
 }
