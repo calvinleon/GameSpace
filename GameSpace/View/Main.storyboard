@@ -17,6 +17,9 @@
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--OnboardingVC-->
@@ -75,21 +78,91 @@
             </objects>
             <point key="canvasLocation" x="758" y="-161"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="Web-WV-nx7">
             <objects>
-                <viewController id="kjf-Fy-j13" sceneMemberID="viewController">
+                <viewController id="kjf-Fy-j13" customClass="LoginVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gs5-sK-P8j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-eh-JIk">
+                                <rect key="frame" x="31" y="314" width="352" height="268"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-cH-JFU">
+                                        <rect key="frame" x="22" y="198" width="309" height="45"/>
+                                        <color key="backgroundColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="M1W-iX-dRF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="CONTINUE">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ZDd-RM-jJJ" kind="show" id="SCI-mg-AJG"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's Your Name?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-eD-vVe">
+                                        <rect key="frame" x="22" y="140" width="309" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HBH-ao-4FR"/>
+                                            <constraint firstAttribute="width" constant="309" id="f6Q-ed-jfh"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-68-Dwd">
+                                        <rect key="frame" x="25" y="30" width="171" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="27"/>
+                                        <color key="textColor" red="0.96470588235294119" green="0.8784313725490196" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GameSpace" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53d-hA-PTb">
+                                        <rect key="frame" x="25" y="70" width="169" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="27"/>
+                                        <color key="textColor" red="0.96470588235294119" green="0.8784313725490196" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro" translatesAutoresizingMaskIntoConstraints="NO" id="kuy-4B-S0G">
+                                        <rect key="frame" x="173" y="-69" width="158" height="206"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.27058823529999998" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2i7-cH-JFU" secondAttribute="trailing" constant="21" id="5Io-Su-YPe"/>
+                                    <constraint firstItem="wps-eD-vVe" firstAttribute="top" secondItem="5tw-eh-JIk" secondAttribute="top" constant="140" id="72x-8d-9gR"/>
+                                    <constraint firstAttribute="bottom" secondItem="2i7-cH-JFU" secondAttribute="bottom" constant="25" id="j0O-e8-Jjd"/>
+                                    <constraint firstItem="2i7-cH-JFU" firstAttribute="leading" secondItem="5tw-eh-JIk" secondAttribute="leading" constant="22" id="paa-gg-NqH"/>
+                                    <constraint firstItem="wps-eD-vVe" firstAttribute="leading" secondItem="5tw-eh-JIk" secondAttribute="leading" constant="22" id="qyC-y0-jna"/>
+                                    <constraint firstItem="2i7-cH-JFU" firstAttribute="top" secondItem="wps-eD-vVe" secondAttribute="bottom" constant="18" id="whg-wg-A4G"/>
+                                    <constraint firstAttribute="trailing" secondItem="wps-eD-vVe" secondAttribute="trailing" constant="21" id="y1P-fF-55E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5tw-eh-JIk" firstAttribute="centerY" secondItem="gs5-sK-P8j" secondAttribute="centerY" id="EA5-cX-L6u"/>
+                            <constraint firstItem="5tw-eh-JIk" firstAttribute="centerX" secondItem="gs5-sK-P8j" secondAttribute="centerX" id="h4c-7D-sHJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hhC-3E-kZM"/>
                     </view>
                     <navigationItem key="navigationItem" id="ad5-vq-1hF"/>
+                    <connections>
+                        <outlet property="bgView" destination="5tw-eh-JIk" id="PGC-3E-jwl"/>
+                        <outlet property="nextBtn" destination="2i7-cH-JFU" id="VGN-6c-HDp"/>
+                        <outlet property="textField" destination="wps-eD-vVe" id="lmj-6M-c46"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s94-G4-4Gw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="-171"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="-171.42857142857142"/>
         </scene>
         <!--Games-->
         <scene sceneID="7jo-8D-NfP">
@@ -205,7 +278,7 @@
             <objects>
                 <viewController id="sDA-eD-Q5I" customClass="DetailGamesVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xf-WL-fEu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game6" translatesAutoresizingMaskIntoConstraints="NO" id="haf-l4-K0v">
@@ -266,6 +339,7 @@ find games that suit your interests</string>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="jWW-ay-5DO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sA9-pU-5F2"/>
                     <connections>
                         <outlet property="gameDescLbl" destination="Wlb-wm-NvF" id="VxQ-6T-Czs"/>
                         <outlet property="gameDifficultyLbl" destination="9EW-rl-CYi" id="nJr-EJ-pLy"/>
@@ -326,7 +400,7 @@ find games that suit your interests</string>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-eW-8zH">
                                 <rect key="frame" x="0.0" y="432" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XcO-mB-ECn">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -375,9 +449,9 @@ find games that suit your interests</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leonardo Peter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-5H-HpH">
-                                <rect key="frame" x="117" y="319" width="181" height="29"/>
+                                <rect key="frame" x="116" y="319" width="183" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -438,6 +512,7 @@ find games that suit your interests</string>
     <resources>
         <image name="Group" width="123" height="123"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="astro" width="138" height="166"/>
         <image name="game3" width="400" height="500"/>
         <image name="game6" width="400" height="500"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="82"/>

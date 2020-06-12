@@ -30,6 +30,7 @@
 		D747A6D2248FFB63001EBCA5 /* GamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6D1248FFB63001EBCA5 /* GamesVC.swift */; };
 		D747A6D4248FFBF0001EBCA5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6D3248FFBF0001EBCA5 /* ProfileVC.swift */; };
 		D747A6D6248FFC36001EBCA5 /* DetailGamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6D5248FFC36001EBCA5 /* DetailGamesVC.swift */; };
+		D74B631A24933D2E00DA9A2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B631924933D2E00DA9A2A /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		D747A6D1248FFB63001EBCA5 /* GamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GamesVC.swift; path = ../GamesVC.swift; sourceTree = "<group>"; };
 		D747A6D3248FFBF0001EBCA5 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileVC.swift; path = ../ProfileVC.swift; sourceTree = "<group>"; };
 		D747A6D5248FFC36001EBCA5 /* DetailGamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailGamesVC.swift; path = ../DetailGamesVC.swift; sourceTree = "<group>"; };
+		D74B631924933D2E00DA9A2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E49C0DE6491793084D06130A /* libPods-GameSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameSpace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D747A6D1248FFB63001EBCA5 /* GamesVC.swift */,
+				D74B631924933D2E00DA9A2A /* LoginVC.swift */,
 				D747A6D5248FFC36001EBCA5 /* DetailGamesVC.swift */,
 				D747A6C1248FF53E001EBCA5 /* OnboardingVC.swift */,
 				D726709D249006850095EC4A /* Slide.swift */,
@@ -294,6 +297,7 @@
 			files = (
 				D747A6D4248FFBF0001EBCA5 /* ProfileVC.swift in Sources */,
 				D747A6C2248FF53E001EBCA5 /* OnboardingVC.swift in Sources */,
+				D74B631A24933D2E00DA9A2A /* LoginVC.swift in Sources */,
 				D747A6BE248FF53E001EBCA5 /* AppDelegate.swift in Sources */,
 				D72670BF249133470095EC4A /* GamesTableViewCell.swift in Sources */,
 				D72670AF249118550095EC4A /* Game.swift in Sources */,
