@@ -10,10 +10,14 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    var userName = UserDefaults.standard.string(forKey: "username")
+
+    @IBOutlet weak var userNameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        userNameLbl.text = userName
     }
 
 }

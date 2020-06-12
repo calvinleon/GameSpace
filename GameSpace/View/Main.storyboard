@@ -100,7 +100,7 @@
                                             <color key="titleColor" red="0.93725490199999995" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZDd-RM-jJJ" kind="show" id="SCI-mg-AJG"/>
+                                            <action selector="nextAction:" destination="kjf-Fy-j13" eventType="touchUpInside" id="Kry-Jh-XHT"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's Your Name?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-eD-vVe">
@@ -158,6 +158,7 @@
                         <outlet property="bgView" destination="5tw-eh-JIk" id="PGC-3E-jwl"/>
                         <outlet property="nextBtn" destination="2i7-cH-JFU" id="VGN-6c-HDp"/>
                         <outlet property="textField" destination="wps-eD-vVe" id="lmj-6M-c46"/>
+                        <segue destination="ZDd-RM-jJJ" kind="show" identifier="toHomeSegue" id="wIp-AM-n2M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s94-G4-4Gw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -449,7 +450,7 @@ find games that suit your interests</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leonardo Peter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-5H-HpH">
-                                <rect key="frame" x="116" y="319" width="183" height="29"/>
+                                <rect key="frame" x="80" y="320" width="255" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -461,10 +462,13 @@ find games that suit your interests</string>
                         <viewLayoutGuide key="safeArea" id="M3b-y4-AkN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="vB6-tG-Cp3"/>
+                    <connections>
+                        <outlet property="userNameLbl" destination="Br8-5H-HpH" id="lnM-3f-RIB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-xL-Y6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932" y="569"/>
+            <point key="canvasLocation" x="2931.8840579710145" y="568.52678571428567"/>
         </scene>
         <!--Item-->
         <scene sceneID="S2x-4q-BLG">
