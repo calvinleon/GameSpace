@@ -14,6 +14,13 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var games = Game.fetchGame()
     
+    var tempGameImg = UIImage()
+    var tempGameName = ""
+    var tempGameDesc = ""
+    var tempGameLength = ""
+    var tempGameDifficulty = ""
+    var tempGameScore = ""
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
   //      navigationController?.navigationBar.prefersLargeTitles = true
@@ -71,47 +78,78 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return headerView
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailGamesVC {
+        
+            destination.gameDesc = tempGameDesc
+            destination.gameDifficulty = tempGameDifficulty
+            destination.gameImg = tempGameImg
+            destination.gameLength = tempGameLength
+            destination.gameName = tempGameName
+            
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             let cell = table.dequeueReusableCell(withIdentifier: "BlankTableViewCell", for: indexPath)
             cell.selectionStyle = .none
-        
+            
             return cell
      
         } else if indexPath.section == 1 {
-               let cell = table.dequeueReusableCell(withIdentifier: GamesTableViewCell.identifier, for: indexPath) as! GamesTableViewCell
-               cell.selectionStyle = .none
-               cell.configure(with: games)
-               return cell
-        
+            let cell = table.dequeueReusableCell(withIdentifier: GamesTableViewCell.identifier, for: indexPath) as! GamesTableViewCell
+            cell.selectionStyle = .none
+            cell.configure(with: games)
+            
+            
+            
+            cell.didSelectItemAction = { [weak self] indexPath in
+                let game = self?.games[indexPath.row]
+                self?.tempGameDifficulty = game?.gameDifficulty ?? ""
+                self?.tempGameImg = game?.gameImg ?? UIImage()
+                self?.tempGameLength = game?.gameLength ?? ""
+                self?.tempGameName = game?.gameName ?? ""
+                self?.tempGameDesc = game?.gameDesc ?? ""
+                self?.performSegue(withIdentifier: "DetailGameSegue", sender: self)
+            }
+                   
+            return cell
         }
         else {
-//            let cell = table.dequeueReusableCell(withIdentifier: GamesTableViewCell.identifier, for: indexPath) as! GamesTableViewCell
-//            cell.selectionStyle = .none
-//            cell.configure(with: games)
-//            return cell
-            
+
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "AllGamesCell", for: indexPath) as! AllGameTableViewCell
             cell2.selectionStyle = .none
             let game = games[indexPath.row]
         
-            
+            cell2.allGameLbl.text = game.gameName
+            cell2.allGameStory.text = game.gameStory
             cell2.allGameImg.image = game.thumbnailImg
             
             return cell2
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2{
+            let game = games[indexPath.row]
+            tempGameDifficulty = game.gameDifficulty
+            tempGameImg = game.gameImg
+            tempGameLength = game.gameLength
+            tempGameName = game.gameName
+            tempGameDesc = game.gameDesc
+            performSegue(withIdentifier: "DetailGameSegue", sender: self)
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 100.0
-
         }else if indexPath.section == 1 {
             return 260.0
-
-        }
-        else {
+        }else {
             return 80.0
         }
         

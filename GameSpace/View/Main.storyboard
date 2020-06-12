@@ -11,6 +11,9 @@
         <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
         </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
@@ -44,7 +47,7 @@
                                         </state>
                                         <connections>
                                             <action selector="nextSegue:" destination="pqb-6O-Afh" eventType="touchUpInside" id="0Er-w9-Akf"/>
-                                            <segue destination="ZDd-RM-jJJ" kind="show" id="s4G-uL-gf8"/>
+                                            <segue destination="kjf-Fy-j13" kind="show" id="Nbr-1c-ECN"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planetyellow" translatesAutoresizingMaskIntoConstraints="NO" id="Ide-22-ggW">
@@ -70,7 +73,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-p7-3ga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360.8695652173915" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="758" y="-161"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Web-WV-nx7">
+            <objects>
+                <viewController id="kjf-Fy-j13" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gs5-sK-P8j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hhC-3E-kZM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ad5-vq-1hF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s94-G4-4Gw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="-171"/>
         </scene>
         <!--Games-->
         <scene sceneID="7jo-8D-NfP">
@@ -81,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="74" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-MO-xX4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,7 +120,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-tc-kyd">
-                                                    <rect key="frame" x="89" y="46" width="229" height="15"/>
+                                                    <rect key="frame" x="89" y="44" width="229" height="15"/>
                                                     <string key="text">one small step to start your adventure
 </string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -109,7 +128,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-nT-t5a">
-                                                    <rect key="frame" x="88" y="14" width="111" height="21"/>
+                                                    <rect key="frame" x="88" y="16" width="111" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -117,11 +136,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="topMargin" constant="3" id="1To-6t-Y4O"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ILk-tc-kyd" secondAttribute="bottom" constant="3" id="Bkw-HO-pb7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ILk-tc-kyd" secondAttribute="bottom" constant="3" id="Jbd-PP-Jch"/>
+                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="topMargin" constant="5" id="1To-6t-Y4O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ILk-tc-kyd" secondAttribute="bottom" constant="5" id="Bkw-HO-pb7"/>
                                                 <constraint firstItem="ILk-tc-kyd" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="15" id="mTO-wh-QYg"/>
-                                                <constraint firstItem="Vf4-nT-t5a" firstAttribute="top" secondItem="EK5-0U-WcX" secondAttribute="topMargin" constant="3" id="ni8-14-X1d"/>
                                                 <constraint firstItem="Vf4-nT-t5a" firstAttribute="leading" secondItem="i9w-un-qSe" secondAttribute="trailing" constant="14" id="w8J-16-wKd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -171,54 +188,52 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="chv-22-2QY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller.fill" catalog="system" id="9GX-6N-dOb"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller.fill" catalog="system" id="aPA-72-xtB"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="table" destination="fiE-MO-xX4" id="b3i-Aj-RCg"/>
+                        <segue destination="sDA-eD-Q5I" kind="show" identifier="DetailGameSegue" id="fyK-We-qCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46g-74-fbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3052.1739130434785" y="-161.38392857142856"/>
+            <point key="canvasLocation" x="2931.8840579710145" y="-161.38392857142856"/>
         </scene>
         <!--Detail GamesVC-->
         <scene sceneID="7Lf-C2-cBv">
             <objects>
                 <viewController id="sDA-eD-Q5I" customClass="DetailGamesVC" customModule="GameSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xf-WL-fEu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjw-Vf-wOr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game6" translatesAutoresizingMaskIntoConstraints="NO" id="haf-l4-K0v">
+                                <rect key="frame" x="0.0" y="89" width="414" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YCE-Si-s7d">
-                                        <rect key="frame" x="188" y="368" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="by8-1W-RqM"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="jl8-Vg-lLB"/>
-                            </scrollView>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phS-87-y4O">
-                                <rect key="frame" x="30" y="788" width="354" height="50"/>
+                                <rect key="frame" x="30" y="787" width="354" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50588235290000005" green="0.61960784310000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                <state key="normal" title="PLAY NOW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGame:" destination="sDA-eD-Q5I" eventType="touchUpInside" id="mCY-cd-BDt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-26-J1U">
-                                <rect key="frame" x="30" y="488" width="354" height="35"/>
+                                <rect key="frame" x="30" y="532" width="354" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlb-wm-NvF">
-                                <rect key="frame" x="30" y="531" width="304" height="41"/>
+                                <rect key="frame" x="30" y="581" width="354" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Explore dozens of exciting games and 
 find games that suit your interests</string>
@@ -226,14 +241,44 @@ find games that suit your interests</string>
                                 <color key="textColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play Length : 5 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3l-7d-R5x">
+                                <rect key="frame" x="30" y="645" width="354" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty : Easy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-rl-CYi">
+                                <rect key="frame" x="30" y="671" width="354" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Highest Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzc-BX-mow">
+                                <rect key="frame" x="30" y="745" width="354" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.4039215686" blue="0.56862745100000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="jWW-ay-5DO"/>
                     </view>
+                    <connections>
+                        <outlet property="gameDescLbl" destination="Wlb-wm-NvF" id="VxQ-6T-Czs"/>
+                        <outlet property="gameDifficultyLbl" destination="9EW-rl-CYi" id="nJr-EJ-pLy"/>
+                        <outlet property="gameImgView" destination="haf-l4-K0v" id="Hnf-ZD-Ovh"/>
+                        <outlet property="gameLengthLbl" destination="E3l-7d-R5x" id="AGM-aX-FFd"/>
+                        <outlet property="gameNameLbl" destination="R5V-26-J1U" id="zSL-M5-auk"/>
+                        <outlet property="gameScoreLbl" destination="mzc-BX-mow" id="RtT-vX-A6Z"/>
+                        <outlet property="playBtn" destination="phS-87-y4O" id="nEq-2E-0h5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lD-uQ-0YZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3789.8550724637685" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="3711.594202898551" y="-161.38392857142856"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="pIG-N3-Bg9">
@@ -268,7 +313,7 @@ find games that suit your interests</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBH-el-VC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139.130434782609" y="507.58928571428567"/>
+            <point key="canvasLocation" x="2142" y="569"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Rgg-AJ-5TB">
@@ -278,23 +323,19 @@ find games that suit your interests</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lg-Nl-T6i">
-                                <rect key="frame" x="146" y="153" width="123" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-eW-8zH">
-                                <rect key="frame" x="0.0" y="457" width="414" height="107"/>
+                                <rect key="frame" x="0.0" y="432" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XcO-mB-ECn">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lb1-yo-tPy">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="30" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mrk-aR-bBS">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -304,10 +345,39 @@ find games that suit your interests</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calvin Leonardo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-5H-HpH">
-                                <rect key="frame" x="88" y="297" width="238" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i37-ON-VEr">
+                                <rect key="frame" x="30" y="81" width="182" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game3" translatesAutoresizingMaskIntoConstraints="NO" id="aWB-am-N3V">
+                                <rect key="frame" x="30" y="611" width="155" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Played Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKS-bI-dIz">
+                                <rect key="frame" x="30" y="580" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Badges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akM-Me-JFS">
+                                <rect key="frame" x="30" y="403" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="3lg-Nl-T6i">
+                                <rect key="frame" x="150" y="193" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leonardo Peter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-5H-HpH">
+                                <rect key="frame" x="117" y="319" width="181" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -320,7 +390,7 @@ find games that suit your interests</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-xL-Y6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3050.7246376811595" y="507.58928571428567"/>
+            <point key="canvasLocation" x="2932" y="569"/>
         </scene>
         <!--Item-->
         <scene sceneID="S2x-4q-BLG">
@@ -331,6 +401,8 @@ find games that suit your interests</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgH-RT-rpv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.50588235294117645" green="0.61960784313725492" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -339,7 +411,7 @@ find games that suit your interests</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6S-En-74H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450.72463768115944" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="10" y="-161"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tpH-EU-jfF">
@@ -355,7 +427,6 @@ find games that suit your interests</string>
                     </tabBar>
                     <connections>
                         <segue destination="Wz2-X9-U2z" kind="relationship" relationship="viewControllers" id="BL5-Hf-njx"/>
-                        <segue destination="laa-8u-ECB" kind="relationship" relationship="viewControllers" id="Usk-iO-EFA"/>
                         <segue destination="Th7-Hx-KSD" kind="relationship" relationship="viewControllers" id="7LN-VG-ThH"/>
                     </connections>
                 </tabBarController>
@@ -365,7 +436,10 @@ find games that suit your interests</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Group" width="123" height="123"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="game3" width="400" height="500"/>
+        <image name="game6" width="400" height="500"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="82"/>
         <image name="leaderboard" width="31" height="20"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

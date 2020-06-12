@@ -16,25 +16,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-yg-5sU">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="he7-S2-VCd">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="200" id="Pyn-rh-bAW"/>
-                            <constraint firstAttribute="height" constant="250" id="uhj-5c-GMZ"/>
-                        </constraints>
-                    </imageView>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-yg-5sU">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <constraints>
-                <constraint firstItem="wQA-yg-5sU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LMI-80-Qlh"/>
-                <constraint firstAttribute="trailing" secondItem="wQA-yg-5sU" secondAttribute="trailing" id="Lsb-Hz-0gK"/>
-                <constraint firstItem="wQA-yg-5sU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cfH-Fn-TTL"/>
-                <constraint firstAttribute="bottom" secondItem="wQA-yg-5sU" secondAttribute="bottom" id="rEb-6L-QsO"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="200" height="250"/>
             <connections>
+                <outlet property="bgView" destination="he7-S2-VCd" id="QXM-gj-tlW"/>
                 <outlet property="gamesImgView" destination="wQA-yg-5sU" id="69r-OC-Rbk"/>
             </connections>
             <point key="canvasLocation" x="23.188405797101453" y="134.59821428571428"/>

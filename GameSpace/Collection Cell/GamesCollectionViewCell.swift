@@ -8,10 +8,18 @@
 
 import UIKit
 
+//protocol GameCellDelegate {
+//    func theSegue(data: Game)
+//}
+
 class GamesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var gamesLbl: UILabel!
     @IBOutlet var gamesImgView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+    
+    var gane : Game?
+//    var gameCellDelegate : GameCellDelegate?
     
     static let identifier = "GamesCollectionViewCell"
     
@@ -24,6 +32,11 @@ class GamesCollectionViewCell: UICollectionViewCell {
         // Initialization code
         
     }
+    
+   
+//    @objc func handleTap() {
+//        gameCellDelegate?.theSegue(data: game!)
+//    }
     
     var game: Game! {
            didSet {
