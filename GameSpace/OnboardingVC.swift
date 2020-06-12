@@ -98,22 +98,27 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
                 
                 if(percentOffset.x > 0 && percentOffset.x <= 0.33) {
                     nextBtn.isHidden = true
-                    planetImg.isHidden = true
 
                 } else if(percentOffset.x > 0.33 && percentOffset.x <= 0.66) {
                     nextBtn.isHidden = true
-                    planetImg.isHidden = true
 
                 } else if(percentOffset.x > 0.66 && percentOffset.x <= 0.95) {
                     nextBtn.isHidden = false
-                    planetImg.isHidden = true
+                    UIView.animate(withDuration: 0.1) {
+                        let position = CGRect(x: 415, y: 218, width: 96, height: 111)
+                        self.planetImg.frame = position
+                    }
                     
                 } else if(percentOffset.x > 0.95 && percentOffset.x <= 1) {
                     nextBtn.isHidden = false
                     UIView.animate(withDuration: 0.5, delay: 0.5, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
-                            
                     self.slides[2].onboardingButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                         }, completion: nil)
+                    
+                    UIView.animate(withDuration: 0.2) {
+                        let position = CGRect(x: 138, y: 218, width: 373.0, height: 354.0)
+                        self.planetImg.frame = position
+                    }
                     planetImg.isHidden = false
                 }
     }
