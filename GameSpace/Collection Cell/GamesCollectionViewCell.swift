@@ -33,6 +33,27 @@ class GamesCollectionViewCell: UICollectionViewCell {
         
     }
     
+    override var isHighlighted: Bool{
+        didSet{
+            bounce(isSelected)
+        }
+    }
+    
+    
+    func bounce(_ bounce: Bool) {
+         UIView.animate(withDuration: 0.1,
+               animations: {
+                   self.contentView.transform = CGAffineTransform(scaleX: 0.80, y: 0.80)
+               },
+                   completion: { _ in
+               UIView.animate(withDuration: 0.1) {
+                   self.contentView.transform = CGAffineTransform.identity
+                   }
+               })
+
+    }
+    
+  
    
 //    @objc func handleTap() {
 //        gameCellDelegate?.theSegue(data: game!)

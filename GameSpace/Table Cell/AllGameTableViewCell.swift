@@ -41,11 +41,11 @@ class AllGameTableViewCell: UITableViewCell {
         func animate() {
               UIView.animate(withDuration: 0.1,
             animations: {
-              //  self.bgTable.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                self.contentView.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
             },
                 completion: { _ in
             UIView.animate(withDuration: 0.1) {
-               // self.bgTable.transform = CGAffineTransform.identity
+                self.contentView.transform = CGAffineTransform.identity
                 }
             })
         }

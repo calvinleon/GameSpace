@@ -112,7 +112,10 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self?.tempGameLength = game?.gameLength ?? ""
                 self?.tempGameName = game?.gameName ?? ""
                 self?.tempGameDesc = game?.gameDesc ?? ""
-                self?.performSegue(withIdentifier: "DetailGameSegue", sender: self)
+                
+                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
+                    self?.performSegue(withIdentifier: "DetailGameSegue", sender: self)
+                }
             }
                    
             return cell
@@ -139,7 +142,11 @@ class GamesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             tempGameLength = game.gameLength
             tempGameName = game.gameName
             tempGameDesc = game.gameDesc
-            performSegue(withIdentifier: "DetailGameSegue", sender: self)
+            
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
+                self.performSegue(withIdentifier: "DetailGameSegue", sender: self)
+
+            }
         }
     }
     

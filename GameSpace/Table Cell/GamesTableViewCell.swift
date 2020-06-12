@@ -26,7 +26,6 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     @IBOutlet var collectionView: UICollectionView!
     
     var didSelectItemAction: ((IndexPath) -> Void)?
-
     
     var games = Game.fetchGame()
     
@@ -47,14 +46,15 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return games.count
     }
-       
+    
+    
 //    func theSegue(data: Game) {
 //        delegate?.cellPressed(data: data)
 //    }
