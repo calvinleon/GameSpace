@@ -51,7 +51,7 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return games.count
+        return games.count-2
     }
     
     
@@ -62,7 +62,7 @@ class GamesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesCollectionViewCell.identifier, for: indexPath) as! GamesCollectionViewCell
-        let game = games[indexPath.item]
+        let game = games[indexPath.item+1]
             
         cell.contentView.layer.cornerRadius = 10
 

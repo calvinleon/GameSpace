@@ -38,7 +38,7 @@ class DetailGamesVC: UIViewController {
         gameNameLbl.text = gameName
         gameDescLbl.text = gameDesc
         gameImgView.image = gameImg
-        gameScoreLbl.text = "Your Highest Score : \(gameScore)"
+        gameScoreLbl.text = "Your Highest Score : 0"
         gameDifficultyLbl.text = "Play Length : \(gameDifficulty)"
         gameLengthLbl.text =  "Play Length : \(gameLength)"
     }
