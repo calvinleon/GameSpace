@@ -30,13 +30,13 @@ class LoginVC: UIViewController {
     }
     @IBAction func nextAction(_ sender: Any) {
         
-        if textField.text?.isEmpty == false{
+//        if textField.text?.isEmpty == false{
             userName = textField.text!
             print(userName)
             UserDefaults.standard.set(userName, forKey: "username")
 
             performSegue(withIdentifier: "toHomeSegue", sender: self)
-        }
+//        }
         
     }
 }
