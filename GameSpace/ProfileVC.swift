@@ -20,6 +20,9 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        badgeCollectionView.delegate = self
+        badgeCollectionView.dataSource = self
+        
         userNameLbl.text = userName
     }
 
@@ -39,12 +42,12 @@ extension ProfileVC: UICollectionViewDataSource, UICollectionViewDelegate{
                
         cell.badge = badge
                
-        if badge.enable == false{
-            cell.contentView.isHidden = true
-        }
-        else {
-            cell.contentView.isHidden = false
-        }
+//        if badge.enable == false{
+//            cell.contentView.isHidden = true
+//        }
+//        else {
+//            cell.contentView.isHidden = false
+//        }
         return cell
     }
     

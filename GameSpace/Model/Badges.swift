@@ -15,20 +15,20 @@ class Badges {
     var achievementJSON = ""
     var enable = false
     
-    init(achievementName: String, achievementImg: UIImage, achievementJSON: String, enable: Bool) {
+    init(achievementName: String, achievementImg: UIImage, enable: Bool) {
         self.achievementName = achievementName
         self.achievementImg = achievementImg
-        self.achievementJSON = achievementJSON
         self.enable = enable
     }
     
     static func fetchBadges() -> [Badges]{
         return[
-//            Badges(achievementName: "Well Done", achievementImg: UIImage(named: "well-done")!,achievementJSON: "well-done", enable: false),
-//            Badges(achievementName: "300 Points", achievementImg: UIImage(named: "300points")!, achievementJSON: "heartbox", enable: false),
-//            Badges(achievementName: "1000 Points", achievementImg: UIImage(named: "1000points")!,achievementJSON: "reward",enable: false),
-//            Badges(achievementName: "7 Day Streak", achievementImg: UIImage(named: "7day-streak")!, achievementJSON: "7day-streak", enable: false),
-            
+            Badges(achievementName: "Well Done", achievementImg: UIImage(named: "badge1")!, enable: true),
+            Badges(achievementName: "300 Points", achievementImg: UIImage(named: "badge2")!, enable: false),
+            Badges(achievementName: "1000 Points", achievementImg: UIImage(named: "badge3")!,enable: false),
+            Badges(achievementName: "7 Day Streak", achievementImg: UIImage(named: "badge4")!, enable: false),
+            Badges(achievementName: "7 Day Streak", achievementImg: UIImage(named: "badge5")!, enable: false),
+            Badges(achievementName: "7 Day Streak", achievementImg: UIImage(named: "badge6")!, enable: false),
         ]
         
     }
