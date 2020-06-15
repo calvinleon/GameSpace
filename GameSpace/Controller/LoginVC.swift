@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginVC: UIViewController {
     @IBOutlet weak var textField: UITextField!
@@ -15,12 +16,14 @@ class LoginVC: UIViewController {
     
 //    UserDefaults.standard.string(forKey: "username")
 
+    let animationView = AnimationView()
     var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.attributedPlaceholder = NSAttributedString(string: "Hello, What's Your Name?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
 
+        
         bgView.layer.cornerRadius = 10
         nextBtn.layer.cornerRadius = 10
         textField.layer.cornerRadius = 10

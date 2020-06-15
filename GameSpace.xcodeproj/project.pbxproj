@@ -31,6 +31,9 @@
 		D747A6D4248FFBF0001EBCA5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6D3248FFBF0001EBCA5 /* ProfileVC.swift */; };
 		D747A6D6248FFC36001EBCA5 /* DetailGamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747A6D5248FFC36001EBCA5 /* DetailGamesVC.swift */; };
 		D74B631A24933D2E00DA9A2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B631924933D2E00DA9A2A /* LoginVC.swift */; };
+		D75C82CC2493B6EB00E2AA21 /* astonout.json in Resources */ = {isa = PBXBuildFile; fileRef = D75C82CB2493B6EB00E2AA21 /* astonout.json */; };
+		D75C82CE2493C15F00E2AA21 /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C82CD2493C15F00E2AA21 /* BadgeCollectionViewCell.swift */; };
+		D75C82D02493C20500E2AA21 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C82CF2493C20500E2AA21 /* Badges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		D747A6D3248FFBF0001EBCA5 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileVC.swift; path = ../ProfileVC.swift; sourceTree = "<group>"; };
 		D747A6D5248FFC36001EBCA5 /* DetailGamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailGamesVC.swift; path = ../DetailGamesVC.swift; sourceTree = "<group>"; };
 		D74B631924933D2E00DA9A2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D75C82CB2493B6EB00E2AA21 /* astonout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astonout.json; sourceTree = "<group>"; };
+		D75C82CD2493C15F00E2AA21 /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D75C82CF2493C20500E2AA21 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 		E49C0DE6491793084D06130A /* libPods-GameSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameSpace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D72670AE249118550095EC4A /* Game.swift */,
+				D75C82CF2493C20500E2AA21 /* Badges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 			children = (
 				D72670B6249132F00095EC4A /* GamesCollectionViewCell.swift */,
 				D72670B7249132F10095EC4A /* GamesCollectionViewCell.xib */,
+				D75C82CD2493C15F00E2AA21 /* BadgeCollectionViewCell.swift */,
 			);
 			path = "Collection Cell";
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 			children = (
 				D747A6BD248FF53E001EBCA5 /* AppDelegate.swift */,
 				D747A6BF248FF53E001EBCA5 /* SceneDelegate.swift */,
+				D75C82CB2493B6EB00E2AA21 /* astonout.json */,
 				D72670B12491325F0095EC4A /* Collection Cell */,
 				D72670B0249132510095EC4A /* Table Cell */,
 				D726709F249008AD0095EC4A /* Fonts */,
@@ -256,6 +265,7 @@
 				D72670B9249132F10095EC4A /* GamesCollectionViewCell.xib in Resources */,
 				D72670D0249162140095EC4A /* Main.storyboard in Resources */,
 				D72670A5249009250095EC4A /* Montserrat-Bold.ttf in Resources */,
+				D75C82CC2493B6EB00E2AA21 /* astonout.json in Resources */,
 				D72670A6249009250095EC4A /* Montserrat-SemiBold.ttf in Resources */,
 				D747A6C7248FF53F001EBCA5 /* Assets.xcassets in Resources */,
 				D70E61072490026B00A9380F /* Slide.xib in Resources */,
@@ -296,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D747A6D4248FFBF0001EBCA5 /* ProfileVC.swift in Sources */,
+				D75C82CE2493C15F00E2AA21 /* BadgeCollectionViewCell.swift in Sources */,
 				D747A6C2248FF53E001EBCA5 /* OnboardingVC.swift in Sources */,
 				D74B631A24933D2E00DA9A2A /* LoginVC.swift in Sources */,
 				D747A6BE248FF53E001EBCA5 /* AppDelegate.swift in Sources */,
@@ -303,6 +314,7 @@
 				D72670AF249118550095EC4A /* Game.swift in Sources */,
 				D747A6D2248FFB63001EBCA5 /* GamesVC.swift in Sources */,
 				D726709E249006850095EC4A /* Slide.swift in Sources */,
+				D75C82D02493C20500E2AA21 /* Badges.swift in Sources */,
 				D747A6D6248FFC36001EBCA5 /* DetailGamesVC.swift in Sources */,
 				D72670D42491E8C70095EC4A /* AllGameTableViewCell.swift in Sources */,
 				D72670B8249132F10095EC4A /* GamesCollectionViewCell.swift in Sources */,
